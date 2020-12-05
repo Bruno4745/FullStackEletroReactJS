@@ -1,24 +1,27 @@
-import logo from './logo.svg';
+import { BrowserRouter } from "react-router-dom";
+import { Container } from 'react-bootstrap';
+import Menu from './Componentes/Menu';
+import Rotas from './rotas'
+import Rodape from './Componentes/Rodape';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div>
+        <header>
+          <Menu />
+        </header>
+        <main>
+          <Container>
+            <Rotas />
+          </Container>
+        </main>
+        <footer>
+          <Rodape />
+        </footer>
+      </div>
+    </BrowserRouter>
   );
 }
 
